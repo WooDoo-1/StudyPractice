@@ -7,7 +7,7 @@ import java.util.List;
 Обратный отсчет
 */
 
-public class Test {
+public class Thread3 {
     public static volatile List<String> list = new ArrayList<>(5);
 
     static {
