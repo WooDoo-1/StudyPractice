@@ -1,4 +1,4 @@
-package test.practice;
+package test.practice.Thread;
 
 public class Thread1 {
     public static volatile Runway RUNWAY = new Runway();   // взлетная полоса
