@@ -1,6 +1,6 @@
 package test.practice.Thread.task;
 
-public class Thread {
+public class Thread1 {
     public static volatile Runway RUNWAY = new Runway();   // взлетная полоса
 
     public static void main(String[] args) throws InterruptedException {
