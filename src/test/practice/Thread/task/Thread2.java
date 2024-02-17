@@ -1,4 +1,4 @@
-package test.practice.Thread;
+package test.practice.Thread.task;
 
 import java.io.BufferedReader;
 import java.io.IOException;

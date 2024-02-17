@@ -1,7 +1,8 @@
-package test.practice.Object;
+package test.practice.Object.task;
 
 
-import test.practice.Object.common.*;
+import test.practice.Object.task.ImageReaderFactory;
+import test.practice.Object.task.common.*;
 
 
 public class Solution {

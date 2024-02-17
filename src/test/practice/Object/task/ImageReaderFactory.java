@@ -1,6 +1,6 @@
-package test.practice.Object;
+package test.practice.Object.task;
 
-import test.practice.Object.common.*;
+import test.practice.Object.task.common.*;
 
 public class ImageReaderFactory {
     public static ImageReader getImageReader(ImageTypes imageTypes) {

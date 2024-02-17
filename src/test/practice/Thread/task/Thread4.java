@@ -1,4 +1,4 @@
-package test.practice.Thread;
+package test.practice.Thread.task;
 
 
 public class Thread4 {

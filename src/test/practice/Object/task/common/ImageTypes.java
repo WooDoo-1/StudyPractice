@@ -1,4 +1,4 @@
-package test.practice.Object.common;
+package test.practice.Object.task.common;
 
 public enum ImageTypes {
     BMP,

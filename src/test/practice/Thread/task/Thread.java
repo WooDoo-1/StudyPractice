@@ -1,6 +1,6 @@
-package test.practice.Thread;
+package test.practice.Thread.task;
 
-public class Thread1 {
+public class Thread {
     public static volatile Runway RUNWAY = new Runway();   // взлетная полоса
 
     public static void main(String[] args) throws InterruptedException {
@@ -11,7 +11,7 @@ public class Thread1 {
 
     private static void waiting() {
         try {
-            Thread.sleep(100);
+            java.lang.Thread.sleep(100);
         } catch (InterruptedException e) {
         }
 
@@ -20,12 +20,12 @@ public class Thread1 {
     private static void takingOff() {
 
         try {
-            Thread.sleep(100);
+            java.lang.Thread.sleep(100);
         } catch (InterruptedException e) {
         }
     }
 
-    public static class Plane extends Thread {
+    public static class Plane extends java.lang.Thread {
         public Plane(String name) {
             super(name);
             start();
@@ -49,19 +49,19 @@ public class Thread1 {
     }
 
     public static class Runway { // взлетная полоса
-        private Thread t;
+        private java.lang.Thread t;
 
-        public Thread getTakingOffPlane() {
+        public java.lang.Thread getTakingOffPlane() {
             return t;
         }
 
-        public void setTakingOffPlane(Thread t) {
+        public void setTakingOffPlane(java.lang.Thread t) {
             synchronized (this) {
                 this.t = t;
             }
         }
 
-        public boolean trySetTakingOffPlane(Thread t) {
+        public boolean trySetTakingOffPlane(java.lang.Thread t) {
             synchronized (this) {
                 if (this.t == null) {
                     this.t = t;
