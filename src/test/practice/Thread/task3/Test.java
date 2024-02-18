@@ -3,18 +3,18 @@ package test.practice.Thread.task3;
 public class Test {
     public static Thread.UncaughtExceptionHandler handler = new ThreadForUnc();
     public static void main(String[] args) {
-        ThreadException thread1 = new ThreadException(handler);
-        thread1.interrupt();
+        ThreadException mainThread = new ThreadException(handler);
+        mainThread.interrupt();
 
-//Раздвоение потока thread1;
-        Thread threadFirstFromThread1 = new Thread(thread1, "threadFirstFromThread1");
-        Thread threadTwoFromThread1 = new Thread(thread1, "threadTwoFromThread1");
-        threadFirstFromThread1.setUncaughtExceptionHandler(handler);
-        threadTwoFromThread1.setUncaughtExceptionHandler(handler);
-        threadFirstFromThread1.start();
-        threadTwoFromThread1.start();
-        threadFirstFromThread1.interrupt();
-        threadTwoFromThread1.interrupt();
+//Раздвоение потока mainThread;
+        Thread thread1FromMainThread = new Thread(mainThread, "thread1FromMainThread");
+        Thread thread2FromMainThread = new Thread(mainThread, "thread2FromMainThread");
+        thread1FromMainThread.setUncaughtExceptionHandler(handler);
+        thread2FromMainThread.setUncaughtExceptionHandler(handler);
+        thread1FromMainThread.start();
+        thread2FromMainThread.start();
+        thread1FromMainThread.interrupt();
+        thread2FromMainThread.interrupt();
     }
 
 
