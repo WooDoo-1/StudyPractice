@@ -17,7 +17,6 @@ public class Test {
         thread2FromMainThread.interrupt();
     }
 
-
     public static class ThreadException extends Thread{
 
         public ThreadException (Thread.UncaughtExceptionHandler handler) {
